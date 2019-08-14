@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mission to Mars</title>
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='static/style.css') }}"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="jumbotron text-center">
-            <h1>Mission To Mars</h1>
+            <h1><strong>Mission To Mars</strong></h1>
             <p>Get the latest info on the Red Planet.</p>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get
+                    Data!</a></p>
         </div>
         <div class="row">
             <div class="col-lg-12 col-sm-12" id="info">
@@ -25,7 +26,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-sm-12" id="main">
+            <div class="col-lg-8 col-sm-12" id="main" style="margin-top: 2em;">
                 <div id="featured">
                     <h2>Featured Mars Image</h2>
                     <hr>
@@ -33,13 +34,16 @@
                         style="height: 100%; width:100%;">
                 </div>
             </div>
-            <div class=" col-lg-4 col-sm-12" id="main">
+            <div class=" col-lg-4 col-sm-12" id="main" style="margin-top: 2em;">
                 <div id="weather-facts">
                     <h2>Current Weather On Mars</h2>
+                    <hr>
                     {{  mars_data.mars_weather  }}
                     <br>
                     <br>
+                    <br>
                     <h2> Mars Facts</h2>
+                    <hr>
                     <div class="table">{{ mars_data.mars_facts_html|safe}}
                     </div>
                 </div>
